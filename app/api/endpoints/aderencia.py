@@ -3,7 +3,7 @@ from utils.reads import read_model, split_df
 from fastapi import APIRouter
 import sys
 from scipy.stats import ks_2samp
-sys.path.append('...')
+
 
 # Setting the logger formatting and poiting to correct file.
 import logging

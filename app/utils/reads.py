@@ -5,7 +5,7 @@ import pandas as pd
 # Reads the specified model using pickle
 def read_model(model_name: str):
     try:
-        model_file = open('../models/' + model_name + '.pkl', 'rb')
+        model_file = open('./models/' + model_name + '.pkl', 'rb')
         model = pickle.load(model_file)
 
         return model

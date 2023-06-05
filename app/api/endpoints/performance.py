@@ -22,9 +22,9 @@ def get_f1(X_test, y_test, model):
         logging.info(
             "Successfully calculated the F1 evaluation metric for the classifier!")
         return {"f1": str(f1)}
-    except KeyError as kerr:
+    except ValueError as verr:
         logging.error(
-            "Exception raised while trying to define F1 score: " + kerr)
+            "ValueError exception raised while trying to define F1 score")
 
 
 # Calculates the satisficing requirements for the classification model
@@ -42,9 +42,9 @@ def get_class_satisficing(X_test, y_test, model):
         logging.info(
             "Successfully defined the satisficing metrics!")
         return {"precision": str(precision), "recall": str(recall), "latency_ms": str(latency_ms)}
-    except KeyError as kerr:
+    except ValueError as verr:
         logging.error(
-            "Exception raised while trying to define satisficing metrics: " + kerr)
+            "ValueError exception raised while trying to define satisficing metrics")
 
 
 # Calculates the evaluation metric (RMSE) for the regressor
@@ -56,9 +56,9 @@ def get_rmse(X_test, y_test, model):
         logging.info(
             "Successfully calculated the RMSE evaluation metric for the regressor!")
         return {"RMSE": str(rmse)}
-    except KeyError as kerr:
+    except ValueError as verr:
         logging.error(
-            "Exception raised while trying to define RMSE score: " + kerr)
+            "ValueError exception raised while trying to define RMSE score")
 
 
 # Calculates the satisficing requirements for the regression model
@@ -76,9 +76,9 @@ def get_regr_satisficing(X_test, y_test, model):
         logging.info(
             "Successfully defined the satisficing metrics!")
         return {"R2": str(r2), "correlation": {"statistic": str(corr.statistic), "p-value": str(corr.pvalue)}, "latency_ms": str(latency_ms)}
-    except KeyError as kerr:
+    except ValueError as verr:
         logging.error(
-            "Exception raised while trying to define satisficing metrics: " + kerr)
+            "ValueError exception raised while trying to define satisficing metrics")
 
 
 # Checks for supported model version and performs
