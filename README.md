@@ -35,7 +35,7 @@ cd app
 uvicorn main:app --host 0.0.0.0 --port 8080
 ```
 
-Uma vez rodando, pode-se utilizar o [notebook](./notebooks/API requests/API.ipynb) para realizar as chamadas à API.
+Uma vez rodando, pode-se utilizar o [notebook](./notebooks/api-requests/API.ipynb) para realizar as chamadas à API.
 
 
 ### API
