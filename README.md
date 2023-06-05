@@ -29,7 +29,7 @@ pip install -r requirements.txt
 Agora, os Jupyter Notebooks estão prontos para serem executados: os de modelagem bem como o de teste da API (dado que o servidor esteja rodando).
 
 
-#### Para rodar a API: Dockerfile
+### Para rodar a API: Dockerfile
 
 A API pode ser executada localmente utilizando ```docker```. Para isso, basta clonar o repositório e navegar no terminal para o diretório raiz [./](./), onde se encontra o Dockerfile. Assim, pode-se utilizar os dois comandos a seguir e o app estará sendo executado na porta 8080 do localhost:
 
