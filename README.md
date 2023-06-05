@@ -42,14 +42,14 @@ Uma vez rodando, pode-se utilizar o [notebook](./notebooks/api-requests/API.ipyn
 
 Em [./app/main.py](./app/main.py) estão referenciados dois endpoints: "/performance/" e "/aderencia/".
 
-1. /performance/{model_from}
+1. /performance/{model}
    - Ao fazer uma requisição POST para o servidor, espera-se, também, um parâmetro para esse endpoint. Isso ocorre pelo fato de haver dois possíveis modelos para se monitorar performance: [./models/classifier.pkl](./models/classifier.pkl) e [./models/regressor.pkl](./models/regressor.pkl). Assim o usuário pode escolher entre ter como resposta sejam as métricas do classificador ou as do regressor.
    - Assim, deve-se definir na URL da requisição "performance/classifier" ou "performance/regressor". Algo diferente disso deve retornar métricas vazias.
    - O "body" da requisição para esse endpoint foi definido como ```dict```, já que serão passados os dados no formato JSON para serem determinadas as métricas.
    - O modelo de time series forecasting não está ainda sendo suportado nesse endpoint.
    
-2. /adherence
-   - Ao fazer uma requisição POST para esse endpoint, espera-se um "body" da requisição como um  ```dict```. Esse dicionário contém uma chave com valor referente aos dados do dataset referência e uma outra chave com od dados do dataset o qual pode estar sofrendo data drifting.
+2. /adherence/{model}
+   - Ao fazer uma requisição POST para esse endpoint, espera-se um "body" da requisição como um  ```dict``` (além do parâmetro referente ao modelo sobre o qual a análise de aderência será realizada). Esse dicionário contém uma chave com valor referente aos dados do dataset referência e uma outra chave com os dados do dataset o qual pode estar sofrendo data drifting.
 
 
 ### Performance
