@@ -35,6 +35,15 @@ cd app
 uvicorn main:app --host 0.0.0.0 --port 8080
 ```
 
+##### Dockerfile
+
+De maneira alternativa, a API pode ser executada localmente utilizando ```docker```. Para isso, basta clonar o repositório e navegar no terminal para o diretório raiz [./](./). Assim, pode-se utilizar os dois comandos a seguir e o app estará sendo executado na porta 8080 do localhost:
+
+```
+docker build -t ml-app .
+docker run -d -p 8080:8080 ml-app
+```
+
 Uma vez rodando, pode-se utilizar o [notebook](./notebooks/api-requests/API.ipynb) para realizar as chamadas à API.
 
 
