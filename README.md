@@ -1,7 +1,7 @@
 # ML-challenge
 ML modelling stripts and a FastAPI application for ML model monitoring (using python:3.10.4)
  
-### Instalação
+### Para rodar os notebooks
 Ao clonar este repositório, navegue para o diretório [./](./) (root) e crie um python virtual environment. No Windows, pode-se utilizar os seguintes comandos no terminal:
  
 ```
@@ -20,24 +20,18 @@ Para instalar o ambiente virtual nas configurações locais do Jupyter, pode-se 
 python -m ipykernel install --user --name=venv
 ```
 
-#### Dependências
-
 Após ativar o ambiente virtual, utilize o ([pip](https://pip.pypa.io/en/stable/installation/)) para instalar as dependências contidas em [./requirements.txt](./requirements.txt). Para isso, estando no diretório [./](./), instale as dependências executando:
 
 ```
 pip install -r requirements.txt
 ```
 
-Agora, a API está pronta para ser executada, bem como os Jupyter Notebooks de modelagem ou o de teste da API. Para isso, navegue para o diretório [./app](./app) e inicie o app utilizando uvicorn fazendo, por exemplo:
+Agora, os Jupyter Notebooks estão prontos para serem executados: os de modelagem bem como o de teste da API (dado que o servidor esteja rodando).
 
-```
-cd app
-uvicorn main:app --host 0.0.0.0 --port 8080
-```
 
-##### Dockerfile
+### Para rodar a API: Dockerfile
 
-De maneira alternativa, a API pode ser executada localmente utilizando ```docker```. Para isso, basta clonar o repositório e navegar no terminal para o diretório raiz [./](./). Assim, pode-se utilizar os dois comandos a seguir e o app estará sendo executado na porta 8080 do localhost:
+A API pode ser executada localmente utilizando ```docker```. Para isso, basta clonar o repositório e navegar no terminal para o diretório raiz [./](./), onde se encontra o Dockerfile. Assim, pode-se utilizar os dois comandos a seguir e o app estará sendo executado na porta 8080 do localhost:
 
 ```
 docker build -t ml-app .
