@@ -15,8 +15,14 @@ def read_model(model_name: str):
 
 # Splits the desired dataframe into X and y
 def split_df(json: dict):
-    test_df = pd.DataFrame(json)
-    y_test = test_df.target
-    X_test = test_df.drop(columns=['target'])
+    try:
+        test_df = pd.DataFrame(json)
+        y_test = test_df.target
+        X_test = test_df.drop(columns=['target'])
 
-    return X_test, y_test
+        return X_test, y_test
+
+    except AttributeError as verr:
+        return None, None
+
+    
